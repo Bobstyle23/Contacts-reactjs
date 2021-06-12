@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Avatar from "./Avatar";
+import Info from "./Info";
 
 class Card extends Component {
   state = {};
@@ -7,11 +9,10 @@ class Card extends Component {
       <div className="card">
         <div className="top">
           <h2 className="name">{this.props.name}</h2>
-          <img className="circle-img" src={this.props.img} alt="avatar_img" />
+          <Avatar img={this.props.img} />
         </div>
         <div className="bottom">
-          <p className="info">{this.props.tel}</p>
-          <p className="info">{this.props.email}</p>
+          <Info tel={this.props.tel} email={this.props.email} />
         </div>
       </div>
     );
