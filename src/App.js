@@ -1,3 +1,4 @@
+import Avatar from "./components/Avatar";
 import Card from "./components/Card";
 import contacts from "./contacts";
 
@@ -13,39 +14,17 @@ function createCard(contact) {
   );
 }
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <h1 className="heading">My Contacts</h1>
+      <Avatar
+        img={
+          "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/130247728_1282555262109266_6744599593313174577_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Is2Th_-vBUQAX9xWm7t&_nc_ht=scontent-ssn1-1.xx&oh=93332bbe6a255c3f1c2e3fc28bfa0f9b&oe=60C86FAC"
+        }
+      />
 
       {contacts.map(createCard)}
-      {/* <Card
-        name={contacts[0].name}
-        img={contacts[0].imgURL}
-        tel={contacts[0].phone}
-        email={contacts[0].email}
-      />
-
-      <Card
-        name={contacts[1].name}
-        img={contacts[1].imgURL}
-        tel={contacts[1].phone}
-        email={contacts[1].email}
-      />
-
-      <Card
-        name={contacts[2].name}
-        img={contacts[2].imgURL}
-        tel={contacts[2].phone}
-        email={contacts[2].email}
-      />
-
-      <Card
-        name={contacts[3].name}
-        img={contacts[3].imgURL}
-        tel={contacts[3].phone}
-        email={contacts[3].email}
-      /> */}
     </div>
   );
 }
